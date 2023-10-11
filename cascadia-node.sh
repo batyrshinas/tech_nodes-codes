@@ -68,13 +68,15 @@ PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 source ~/.profile
 
 #Step 5: Build Cascadia from source
-curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.6/cascadiad -o cascadiad
-#cd bin/
+sudo curl -L -O https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.4/cascadiad-v0.1.4-linux-amd64.tar.gz
+sudo tar -zxf cascadiad-v0.1.4-linux-amd64.tar.gz
+cd bin/
 sudo chmod u+x cascadiad
 sudo cp cascadiad /usr/local/bin/cascadiad
 sudo chown $USER /usr/local/bin/cascadiad
 cd $HOME
 rm -r bin
+rm cascadiad-v0.1.4-linux-amd64.tar.gz
 
 #Step 6: To confirm that the installation has succeeded, run
 cascadiad version
