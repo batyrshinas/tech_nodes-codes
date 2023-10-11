@@ -69,7 +69,7 @@ source ~/.profile
 
 #Step 5: Build Cascadia from source
 curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.6/cascadiad -o cascadiad
-cd bin/
+#cd bin/
 sudo chmod u+x cascadiad
 sudo cp cascadiad /usr/local/bin/cascadiad
 sudo chown $USER /usr/local/bin/cascadiad
