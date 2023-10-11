@@ -126,7 +126,7 @@ echo "СЕРВИСНЫЙ ФАЙЛ УСПЕШНО СОЗДАН"
 echo " "
 echo " "
 
-suudo apt  install jq  # version 1.6-2.1ubuntu3 -y
+sudo apt  install jq  # version 1.6-2.1ubuntu3 -y
 sleep 10
 
 echo " "
