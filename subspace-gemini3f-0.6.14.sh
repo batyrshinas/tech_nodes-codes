@@ -1,30 +1,6 @@
 #!/bin/bash
 tput reset 
 tput civis 
-echo -e "\033[32m████─████─██─██─████─███─████─███─██─██─█──█─████──███─████─████─███─███\e[0m"
-echo -e "\033[32m█──█─█──█──███──█──█──█──█──█─█────███──██─█─█──██──█──█──█─█──█──█──█──\e[0m"
-echo -e "\033[32m█────████───█───████──█──█──█─███───█───█─██─█──██──█──█────████──█──███\e[0m"
-echo -e "\033[32m█──█─█─█────█───█─────█──█──█───█───█───█──█─█──██──█──█──█─█──█──█──█──\e[0m"
-echo -e "\033[32m████─█─█────█───█─────█──████─███───█───█──█─████──███─████─█──█──█──███\e[0m"
-echo " "
-echo -e "\033[93m╔╗─╔╗╔══╗╔══╗─╔═══╗───╔══╗╔╗─╔╗╔══╗╔════╗╔══╗╔╗──╔╗──╔═══╗╔═══╗\e[0m"
-echo -e "\033[93m║╚═╝║║╔╗║║╔╗╚╗║╔══╝───╚╗╔╝║╚═╝║║╔═╝╚═╗╔═╝║╔╗║║║──║║──║╔══╝║╔═╗║\e[0m"
-echo -e "\033[93m║╔╗─║║║║║║║╚╗║║╚══╗────║║─║╔╗─║║╚═╗──║║──║╚╝║║║──║║──║╚══╗║╚═╝║\e[0m"
-echo -e "\033[93m║║╚╗║║║║║║║─║║║╔══╝────║║─║║╚╗║╚═╗║──║║──║╔╗║║║──║║──║╔══╝║╔╗╔╝\e[0m"
-echo -e "\033[93m║║─║║║╚╝║║╚═╝║║╚══╗───╔╝╚╗║║─║║╔═╝║──║║──║║║║║╚═╗║╚═╗║╚══╗║║║║─\e[0m"
-echo -e "\033[93m╚╝─╚╝╚══╝╚═══╝╚═══╝───╚══╝╚╝─╚╝╚══╝──╚╝──╚╝╚╝╚══╝╚══╝╚═══╝╚╝╚╝─\e[0m"
-
-echo "ВВЕДИТЕ КЛЮЧ ДОСТУПА К НОДЕ:"
-read key
-
-response=$(curl -s -o /dev/null -w "%{http_code}" "https://cryptosyndicate.vc/api/user/nodes/activation-code/$key")
-
-if [ $response -eq 200 ]; then
-  echo "ДОСТУП РАЗРЕШЕН"
-else
-  echo "ДОСТУП ЗАПРЕЩЕН"
-  exit 1
-fi
 
 echo " "
 echo "НАЧИНАЕМ УСТАНОВКУ НОДЫ SUBSPACE"
@@ -70,7 +46,7 @@ echo "УСТАНОВКА НЕОБХОДИМОГО ПО"
 cd $HOME
 sudo apt update && sudo apt upgrade -y
 sudo apt install ocl-icd-libopencl1 libgomp1 wget -y
-sudo wget -O subspace-cli 'https://github.com/subspace/subspace-cli/releases/download/v0.5.3-alpha-2/subspace-cli-ubuntu-x86_64-skylake-v0.5.3-alpha-2'
+sudo wget -O subspace-cli 'https://github.com/subspace/pulsar/releases/download/v0.6.14-alpha/pulsar-ubuntu-x86_64-skylake-v0.6.14-alpha'
 speep 15
 sudo chmod +x subspace-cli
 sudo mv subspace-cli /usr/local/bin/
