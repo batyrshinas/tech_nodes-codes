@@ -17,7 +17,7 @@ echo "ОБНОВЛЕНИЕ БИНАРНИКА"
 echo "  "
 echo "  "
 cd $HOME
-wget -O subspace-cli "https://github.com/subspace/subspace-cli/releases/download/v0.5.3-alpha-2/subspace-cli-ubuntu-x86_64-skylake-v0.5.3-alpha-2"
+wget -O subspace-cli "https://github.com/subspace/pulsar/releases/download/v0.6.14-alpha/pulsar-ubuntu-x86_64-skylake-v0.6.14-alpha"
 sleep 15
 sudo chmod +x subspace-cli
 sudo mv subspace-cli /usr/local/bin/
@@ -31,7 +31,7 @@ echo "  "
 echo "  "
 echo "ПЕРЕНАСТРОЙКА КОНФИГ ФАЙЛА"
 sudo chmod +x /root/.config/subspace-cli
-sudo sed -i 's/chain = "Gemini3d"/chain = "Gemini3e"/g' /root/.config/subspace-cli/settings.toml
+sudo sed -i 's/chain = "Gemini3e"/chain = "Gemini3f"/g' /root/.config/subspace-cli/settings.toml
 echo "  "
 echo "  "
 echo "СТАРТ СЕРВИСА"
