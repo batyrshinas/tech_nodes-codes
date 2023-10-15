@@ -1,16 +1,6 @@
 #!/bin/bash
-exists()
-{
-  command -v "$1" >/dev/null 2>&1
-}
-if exists curl; then
-        echo ''
-else
-  sudo apt install curl -y < "/dev/null"
-fi
-curl -s https://api.nodes.guru/logo.sh | bash
-echo "==================================================="
-sleep 2
+echo " ОБНОВЛЯЕМ НОДУ STARKNET"
+systemctl stop starknetd.service
 #sudo apt update && sudo apt-get install software-properties-common -y
 #sudo add-apt-repository ppa:deadsnakes/ppa -y
 #sudo apt update && sudo apt install curl git tmux python3.10 python3.10-venv python3.10-dev build-essential libgmp-dev pkg-c
@@ -36,3 +26,6 @@ User=$USER
 Type=simple
 ExecStart=/usr/local/bin/pathfinder --http-rpc=\"0.0.0.0:9545\" --ethereum.url \"$ALCHEMY\"
 Restart=on-failure
+systemctl start starknetd.service
+sleep 10
+systemctl status starknetd.service
