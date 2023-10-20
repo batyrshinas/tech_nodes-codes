@@ -57,7 +57,7 @@ echo " "
 echo "СОБИРАЕМ НОДУ"
 echo " "
 echo " "
-git clone -b v0.8.2 https://github.com/eqlabs/pathfinder.git
+git clone -b v0.5.3 https://github.com/eqlabs/pathfinder.git
 cd pathfinder/py
 python3.10 -m venv .venv
 source .venv/bin/activate
