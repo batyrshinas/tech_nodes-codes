@@ -10,6 +10,9 @@ source $HOME/.cargo/env
 source $HOME/.bash_profile
 rustup update stable --force
 
+sudo apt update
+sudo apt upgrade -y
+apt  install cargo
 cd ~/pathfinder
 git pull
 git fetch --all
@@ -17,15 +20,15 @@ git checkout v0.8.2
 cargo build --release --bin pathfinder
 mv ~/pathfinder/target/release/pathfinder /usr/local/bin/
 
-echo "[Unit]
-Description=StarkNet
-After=network.target
+#echo "[Unit]
+#Description=StarkNet
+#After=network.target
 
-[Service]
-User=$USER
-Type=simple
-ExecStart=/usr/local/bin/pathfinder --http-rpc=\"0.0.0.0:9545\" --ethereum.url \"$ALCHEMY\"
-Restart=on-failure
+#[Service]
+#User=$USER
+#Type=simple
+#ExecStart=/usr/local/bin/pathfinder --http-rpc=\"0.0.0.0:9545\" --ethereum.url \"$ALCHEMY\"
+#Restart=on-failure
 systemctl start starknetd.service
 sleep 10
 systemctl status starknetd.service
