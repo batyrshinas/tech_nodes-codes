@@ -44,9 +44,13 @@ sudo apt update && sudo apt install screen tmux python3.10 python3.10-venv pytho
 pip3 install fastecdsa
 sudo apt install -y pkg-config
 
-curl https://sh.rustup.rs -sSf | sh -s -- -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#curl https://sh.rustup.rs -sSf | sh -s -- -y
+sudo apt install cargo -y
 source $HOME/.cargo/env
-rustup update stable --force
+rustup update stable
+#source $HOME/.cargo/env
+#rustup update stable --force
 cd $HOME
 
 echo " "
@@ -57,7 +61,8 @@ echo " "
 echo "СОБИРАЕМ НОДУ"
 echo " "
 echo " "
-git clone -b v0.5.3 https://github.com/eqlabs/pathfinder.git
+git clone --branch v0.8.1 https://github.com/eqlabs/pathfinder.git
+#git clone -b v0.5.3 https://github.com/eqlabs/pathfinder.git
 cd pathfinder/py
 python3.10 -m venv .venv
 source .venv/bin/activate
