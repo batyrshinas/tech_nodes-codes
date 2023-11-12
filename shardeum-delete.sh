@@ -27,7 +27,7 @@ echo " "
 echo "УДАЛЕНИЕ  НОДЫ"
 echo " "
 echo " "
-
+cd $HOME
 sudo docker stop shardeum-dashboard
 sudo docker rm shardeum-dashboard
 sudo docker image rm local-dashboard
