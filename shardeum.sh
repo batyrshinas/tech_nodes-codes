@@ -1,7 +1,7 @@
 #!/bin/bash
 tput reset 
 tput civis 
-your_server_ip=$(wget -qO- eth0.me)
+
 echo " "
 echo " "
 echo "УСТАНОВКА ПРЕРЕКВИЗИТОВ"
@@ -41,4 +41,6 @@ exit
 cd $HOME
 
 echo "******************* УСТАНОВКА НОДЫ ЗАВЕРШЕНА *******************"
+your_server_ip=$(wget -qO- eth0.me)
+sleep 5
 echo "Для запуска ноды перейдите на дашборд по ссылке https://$your_server_ip:8080"
