@@ -1,7 +1,7 @@
 #!/bin/bash
 tput reset 
 tput civis 
-your_server_ip=(wget -qO- eth0.me)
+your_server_ip=$(wget -qO- eth0.me)
 echo " "
 echo "УСТАНОВКА ПРЕРЕКВИЗИТОВ"
 echo " "
@@ -30,6 +30,8 @@ cd $HOME
 cd .shardeum
 ./shell.sh
 operator-cli gui start
+operator-cli start
+operator-cli status
 exit
 cd $HOME
 
