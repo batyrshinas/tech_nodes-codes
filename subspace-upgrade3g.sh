@@ -30,9 +30,10 @@ sudo subspace-cli init
 echo "  "
 echo "  "
 echo "ПЕРЕНАСТРОЙКА КОНФИГ ФАЙЛА"
+sudo chmod +x /root/.config/pulsar
 sudo chmod +x /root/.config/subspace-cli
-sudo sed -i 's/chain = "Gemini3f"/chain = "Gemini3g"/g' /root/.config/subspace-cli/settings.toml
 sudo sed -i 's/chain = "Gemini3f"/chain = "Gemini3g"/g' /root/.config/pulsar/settings.toml
+sudo sed -i 's/chain = "Gemini3f"/chain = "Gemini3g"/g' /root/.config/subspace-cli/settings.toml
 echo "  "
 echo "  "
 echo "СТАРТ СЕРВИСА"
