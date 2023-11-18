@@ -21,6 +21,7 @@ wget -O subspace-cli "https://github.com/subspace/pulsar/releases/download/v0.6.
 sleep 15
 sudo chmod +x subspace-cli
 sudo mv subspace-cli /usr/local/bin/
+cd /usr/local/bin/
 echo "  "
 echo "  "
 echo "ДАЛЕЕ НЕОБХОДИМО ВВЕСТИ АДРЕС КОШЕЛЬКА POLKADOT.JS ИЛИ SUBWALLET И НАЗВАНИЕ НОДЫ. ОСТАЛЬНЫЕ ШАГИ ОСТАВЛЯЕМ ПО УМОЛЧАНИЮ (НАЖИМАЕМ ENTER)"
