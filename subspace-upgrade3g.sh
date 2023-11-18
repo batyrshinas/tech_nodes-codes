@@ -26,14 +26,14 @@ echo "  "
 echo "ДАЛЕЕ НЕОБХОДИМО ВВЕСТИ АДРЕС КОШЕЛЬКА POLKADOT.JS ИЛИ SUBWALLET И НАЗВАНИЕ НОДЫ. ОСТАЛЬНЫЕ ШАГИ ОСТАВЛЯЕМ ПО УМОЛЧАНИЮ (НАЖИМАЕМ ENTER)"
 echo "  "
 echo "  "
-sudo subspace-cli init
+sudo ./subspace-cli init
 echo "  "
 echo "  "
 echo "ПЕРЕНАСТРОЙКА КОНФИГ ФАЙЛА"
-sudo chmod +x /root/.config/pulsar
-sudo chmod +x /root/.config/subspace-cli
-sudo sed -i 's/chain = "Gemini3f"/chain = "Gemini3g"/g' /root/.config/pulsar/settings.toml
-sudo sed -i 's/chain = "Gemini3f"/chain = "Gemini3g"/g' /root/.config/subspace-cli/settings.toml
+sudo chmod +x $HOME/.config/pulsar
+sudo chmod +x $HOME/.config/subspace-cli
+sudo sed -i 's/chain = 'gemini-3f'/chain = 'gemini-3g'/g' $HOME/.config/pulsar/settings.toml
+sudo ./subspace-cli farm
 echo "  "
 echo "  "
 echo "СТАРТ СЕРВИСА"
