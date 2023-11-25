@@ -25,7 +25,6 @@ echo " "
 cd $HOME
 sudo apt update && sudo apt upgrade -y
 sudo curl -O "https://gitlab.com/shardeum/validator/dashboard/-/raw/main/installer.sh" && chmod +x installer.sh && ./installer.sh
-
 echo " "
 echo " "
 echo "ЗАПУСК ВАДИДАТОРА SHARDEUM"
@@ -34,8 +33,8 @@ echo " "
 cd $HOME
 cd .shardeum
 ./shell.sh
-operator-cli gui start
 operator-cli start
+operator-cli gui start
 operator-cli status
 exit
 cd $HOME
