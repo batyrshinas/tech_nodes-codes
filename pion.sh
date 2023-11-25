@@ -10,6 +10,8 @@ docker rm muon-node mongo redis
 sleep 60
 echo " "
 echo " "
+sudo apt install docker-compose
+
 
 echo "---ADD ACCEPT RULES TO FIREWALL---"
 iptables -A INPUT -p tcp --dport 8011 -j ACCEPT
