@@ -1,7 +1,7 @@
 #!/bin/bash
 tput reset
 tput civis
-
+#yes
 echo "  "
 echo "  "
 
