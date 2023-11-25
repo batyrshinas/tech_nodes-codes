@@ -29,8 +29,10 @@ echo "УДАЛЕНИЕ  НОДЫ"
 sudo systemctl stop subspaced.service
 sudo systemctl disable subspaced.service
 sudo rm -v /etc/systemd/system/subspaced.service
+sudo rm -v /etc/systemd/system/subspaced-farmer
 sudo systemctl daemon-reload
 sudo systemctl stop subspaced subspaced-farmer &>/dev/null
+sudo systemctl stop subspaced-farmer.service &>/dev/null
 sudo rm -rf ~/.local/share/subspace*
 sudo rm /usr/local/bin/subspace-cli
 sudo rm -rf $HOME/.config/subspace-cli/
