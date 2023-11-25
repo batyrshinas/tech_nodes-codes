@@ -21,8 +21,8 @@ iptables -A INPUT -p tcp --dport 9012 -j ACCEPT
 
 echo "---GET PION---"
 curl -o docker-compose.yml https://raw.githubusercontent.com/muon-protocol/muon-node-js/pion/docker-compose-pull.yml
-docker compose pull
-docker compose up -d
+sudo docker-compose pull
+sudo docker-compose up -d
 echo " "
 echo " "
 
