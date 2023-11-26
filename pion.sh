@@ -33,6 +33,7 @@ ip_address=$(wget -qO- eth0.me)
 echo "ПРОВЕРКА НОДЫ"
 echo " "
 echo " "
+sleep 60
 curl http://$ip_address:8012/status
 
 
