@@ -24,7 +24,9 @@ echo " "
 echo "---GET PION---"
 curl -o docker-compose.yml https://raw.githubusercontent.com/muon-protocol/muon-node-js/pion/docker-compose-pull.yml
 sudo docker compose pull
-sudo docker compose up -d
+sudo docker-compose up -d
+sudo docker compose pull
+sudo docker-compose up -d
 echo " "
 echo " "
 
