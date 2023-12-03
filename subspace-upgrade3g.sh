@@ -17,7 +17,7 @@ echo "ОБНОВЛЕНИЕ БИНАРНИКА"
 echo "  "
 echo "  "
 cd $HOME
-wget -O subspace-cli-node "https://github.com/subspace/subspace/releases/download/gemini-3g-2023-nov-29/subspace-node-ubuntu-aarch64-gemini-3g-2023-nov-29"
+wget -O subspace-cli-node "https://github.com/subspace/subspace/releases/download/gemini-3g-2023-nov-29/subspace-node-ubuntu-x86_64-skylake-gemini-3g-2023-nov-29"
 sleep 15
 wget -O subspace-cli-farmer "https://github.com/subspace/subspace/releases/download/gemini-3g-2023-nov-29/subspace-farmer-ubuntu-x86_64-skylake-gemini-3g-2023-nov-29"
 sleep 15
