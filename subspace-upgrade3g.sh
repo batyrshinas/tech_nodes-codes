@@ -17,7 +17,7 @@ echo "ОБНОВЛЕНИЕ БИНАРНИКА"
 echo "  "
 echo "  "
 cd $HOME
-wget -O subspace-cli "https://github.com/subspace/pulsar/releases/download/v0.7.1-alpha/pulsar-ubuntu-x86_64-skylake-v0.7.1-alpha"
+wget -O subspace-cli "https://github.com/subspace/subspace/releases/download/gemini-3g-2023-dec-01/subspace-farmer-ubuntu-x86_64-skylake-gemini-3g-2023-dec-01"
 sleep 15
 sudo chmod +x subspace-cli
 sudo mv subspace-cli /usr/local/bin/
