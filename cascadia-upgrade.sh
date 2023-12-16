@@ -17,7 +17,7 @@ echo "  "
 echo "  "
 rm /usr/local/bin/cascadiad
 cd $HOME
-curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.8/cascadiad -o cascadiad
+curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.9/cascadiad -o cascadiad
 #cd bin/
 sudo chmod u+x cascadiad
 sudo cp cascadiad /usr/local/bin/cascadiad
