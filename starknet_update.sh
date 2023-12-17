@@ -8,8 +8,8 @@ if exists curl; then
 else
   sudo apt install curl -y < "/dev/null"
 fi
-curl -s https://api.nodes.guru/logo.sh | bash
-echo "==================================================="
+#curl -s https://api.nodes.guru/logo.sh | bash
+#echo "==================================================="
 sleep 2
 sudo apt update && sudo apt install pkg-config libssl-dev libzstd-dev protobuf-compiler -y
 #sudo add-apt-repository ppa:deadsnakes/ppa -y
