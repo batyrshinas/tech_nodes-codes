@@ -10,7 +10,6 @@ echo " "
 echo " "
 
 curl -O https://gitlab.com/shardeum/validator/dashboard/-/raw/main/installer.sh && chmod +x installer.sh && ./installer.sh
-
 cd $HOME
 cd .shardeum
 ./shell.sh
@@ -25,4 +24,12 @@ echo " "
 echo "******************* ОбНОВЛЕНИЕ НОДЫ ЗАВЕРШЕНА *******************"
 echo " "
 echo " "
-echo "Для проверки ноды перейдите по ссылке https://$your_server_ip:8080"
+echo " "
+echo " "
+echo "******************* ПРОВЕРКИ ВЕРСИИ НОДЫ *******************"
+echo " "
+echo " "
+curl $your_server_ip:9001/nodeinfo
+echo " "
+echo " "
+echo "ВАШ ДАШБОРД - https://$your_server_ip:8080"
