@@ -21,7 +21,7 @@ esac
 
 echo "НАЧИНАЕМ ОБНОВЛЕНИЕ НОДЫ TAIKO..."
 cd ~/simple-taiko-node
-sudo docker compose pull
+sudo docker-compose pull
 cd $HOME
 
 echo " "
