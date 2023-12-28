@@ -189,7 +189,7 @@ echo "ЗАПУСК НОДЫ"
 echo " "
 echo " "
 cd ~/simple-taiko-node
-docker compose up -d
+docker-compose up -d
 echo " "
 echo " "
 echo "ПОСМОТРЕТЬ ТРАНЗАКЦИИ НОДЫ МОЖНО ПО ССЫЛКЕ: $link_etherscan ИЛИ $link_explorer"
