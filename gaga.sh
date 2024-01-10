@@ -48,15 +48,18 @@ echo "ЗАПУСКАЕМ НОДУ"
 sudo ./apphub service start
 sleep 20
 echo " "
+echo " "
 sudo ./apps/gaganode/gaganode config set --token=$token
+echo " "
 echo " "
 echo "ПЕРЕЗАПУСКАЕМ НОДУ"
 ./apphub restart
 sleep 30
 echo " "
 echo "СТАТУС НОДЫ"
-#./app status
 ./apphub status
+echo " "
+echo " "
 echo " "
 echo "ЕСЛИ В КОНЦЕ НАПИСАНО [RUNNING], ТО ВСЕ УСТАНОВИЛОСЬ ПРАВИЛЬНО. ПРОВЕРЬТЕ ТАКЖЕ СТАТУС НОДЫ НА СТРАНИЦЕ https://dashboard.gaganode.com/user_node"
 echo " "
