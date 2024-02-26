@@ -35,9 +35,12 @@ echo "НАСТРОЙКА ОКРУЖЕНИЯ"
 echo " "
 echo " "
 cp .env.example .env
-sed -i.bak "s|^ETH_CLIENT_ADDRESS=.*|ETH_CLIENT_ADDRESS=$ETH_CLIENT_ADDRESS|" .env
-sed -i.bak "s|^ETH_TESTNET_KEY=.*|ETH_TESTNET_KEY=$ETH_TESTNET_KEY|" .env
-sed -i.bak "s|^RLN_RELAY_CRED_PASSWORD=.*|RLN_RELAY_CRED_PASSWORD=$RLN_RELAY_CRED_PASSWORD|" .env
+#sed -i.bak "s|^ETH_CLIENT_ADDRESS=.*|ETH_CLIENT_ADDRESS=$ETH_CLIENT_ADDRESS|" .env
+#sed -i.bak "s|^ETH_TESTNET_KEY=.*|ETH_TESTNET_KEY=$ETH_TESTNET_KEY|" .env
+#sed -i.bak "s|^RLN_RELAY_CRED_PASSWORD=.*|RLN_RELAY_CRED_PASSWORD=$RLN_RELAY_CRED_PASSWORD|" .env
+sed -i "s/<key>/$ETH_CLIENT_ADDRESS/g" ".env"
+sed -i "s/<YOUR_TESTNET_PRIVATE_KEY_HERE>/$ETH_TESTNET_KEY/g" ".env"
+sed -i "s/my_secure_keystore_password/$RLN_RELAY_CRED_PASSWORD/g" ".env"
 #<key>
 #<YOUR_TESTNET_PRIVATE_KEY_HERE>
 #my_secure_keystore_password
