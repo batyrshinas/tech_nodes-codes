@@ -33,6 +33,7 @@ sudo rm -rf /etc/systemd/system/starknetd.service
 sudo rm -rf /usr/local/bin/pathfinder
 rm -rf $HOME/.cargo
 rm -rf $HOME/.rustup
+rm -rf $HOME/.starknet
 echo " "
 echo " "
 echo "НОДА УДАЛЕНА"
