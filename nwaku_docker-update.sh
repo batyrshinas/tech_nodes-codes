@@ -24,8 +24,8 @@ echo " "
 echo " "
 
 
-OLD_IMAGE="-harbor.status.im/wakuorg/nwaku:v0.25.0"
-NEW_IMAGE="-harbor.status.im/wakuorg/nwaku:v0.26.0"
+OLD_IMAGE="nwaku:v0.25.0"
+NEW_IMAGE="nwaku:v0.26.0"
 DOCKER_COMPOSE_FILE="docker-compose.yml"
 
 # Проверяем, существует ли файл docker-compose.yaml
