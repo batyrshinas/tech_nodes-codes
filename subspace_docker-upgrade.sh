@@ -25,9 +25,9 @@ echo " "
 
 
 OLD_IMAGE_NODE="node:gemini-3h-2024-apr-26-2"
-NEW_IMAGE_NODE="node:gemini-3h-2024-may-1"
+NEW_IMAGE_NODE="node:gemini-3h-2024-may-01"
 OLD_IMAGE_FARMER="farmer:gemini-3h-2024-apr-26-2"
-NEW_IMAGE_FARMER="farmer:gemini-3h-2024-may-1"
+NEW_IMAGE_FARMER="farmer:gemini-3h-2024-may-01"
 DOCKER_COMPOSE_FILE="docker-compose.yaml"
 
 # Проверяем, существует ли файл docker-compose.yaml
